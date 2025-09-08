@@ -1,6 +1,42 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
+class BenefitsList extends StatelessWidget {
+  final List<String> benefits;
+
+  const BenefitsList({
+    Key? key,
+    required this.benefits,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 16),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          ...benefits.map((benefit) => Padding(
+            padding: const EdgeInsets.only(bottom: 8.0),
+            child: Row(
+              children: [
+                const Icon(Icons.check_circle, size: 20, color: Colors.green),
+                const SizedBox(width: 8),
+                Expanded(
+                  child: Text(
+                    benefit,
+                    style: const TextStyle(fontSize: 16),
+                  ),
+                ),
+              ],
+            ),
+          )).toList(),
+        ],
+      ),
+    );
+  }
+}
+
 class MistakesList extends StatelessWidget {
   final List<String> mistakes;
 
@@ -375,6 +411,30 @@ class ExerciseInfo extends StatelessWidget {
                   )
                 ]
             ),
+
+            SizedBox(height: 30,),
+
+            ContentCard(
+                icon: SvgPicture.asset(
+                  "assets/icons/target-svgrepo-com.svg",
+                  width: 20,
+                  height: 20,
+                ),
+                title: "Hello world",
+                children: [
+                  Column(children: [
+                    BenefitsList(
+                      benefits: [
+                        "Builds overall chest mass and strength",
+                        "Develops anterior deltoids and triceps",
+                        "Improves pushing power",
+                        "Functional movement pattern",
+                      ],
+                    )
+                  ],)
+                ]
+            ),
+
           ]
         ),
       ),
