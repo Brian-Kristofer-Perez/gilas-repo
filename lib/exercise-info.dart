@@ -1,6 +1,42 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
+class MistakesList extends StatelessWidget {
+  final List<String> mistakes;
+
+  const MistakesList({
+    Key? key,
+    required this.mistakes,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 16),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          ...mistakes.map((mistake) => Padding(
+            padding: const EdgeInsets.only(bottom: 8.0),
+            child: Row(
+              children: [
+                const Icon(Icons.circle, size: 8, color: Colors.red),
+                const SizedBox(width: 8),
+                Expanded(
+                  child: Text(
+                    mistake,
+                    style: const TextStyle(fontSize: 16),
+                  ),
+                ),
+              ],
+            ),
+          )).toList(),
+        ],
+      ),
+    );
+  }
+}
+
 class InstructionCard extends StatelessWidget {
   final String step;
   final String instruction;
@@ -148,6 +184,7 @@ class ExerciseInfo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color(0xFFE6F0FA),
       appBar: AppBar(
         backgroundColor: Colors.white,
         elevation: 2.0,
@@ -316,11 +353,31 @@ class ExerciseInfo extends StatelessWidget {
                     InstructionCard(step: '7', instruction: "sample text", tip: "sample tip"),
                   ],)
                 ]
-            )
+            ),
+
+            SizedBox(height: 30,),
+
+            ContentCard(
+                icon: SvgPicture.asset(
+                  "assets/icons/target-svgrepo-com.svg",
+                  width: 20,
+                  height: 20,
+                ),
+                title: "Hello world",
+                children: [
+                  MistakesList(mistakes: [
+                    "Bouncing the bar off the chest",
+                    "Flaring elbows too wide",
+                    "Not maintaining proper back arch",
+                    "Uneven bar path",
+                    "Lifting feet off the ground",
+                    ]
+                  )
+                ]
+            ),
           ]
-        )
+        ),
       ),
-      backgroundColor: Color(0xFFE6F0FA),
     );
   }
 }
