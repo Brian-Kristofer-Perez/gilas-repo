@@ -57,18 +57,21 @@ class TextLabel extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+      padding: EdgeInsets.symmetric(horizontal: 8, vertical: 4),
       decoration: BoxDecoration(
         color: Colors.white,
         border: Border.all(
-          color: Colors.grey,
+          color: Color(0xD0C0C0C0),
           width: 1,
         ),
-        borderRadius: BorderRadius.circular(4),
+        borderRadius: BorderRadius.circular(8),
       ),
       child: Text(
         label,
-        style: TextStyle(fontSize: 11),
+        style: TextStyle(
+          fontSize: 11,
+          fontWeight: FontWeight.bold
+        ),
       ),
     );
   }
