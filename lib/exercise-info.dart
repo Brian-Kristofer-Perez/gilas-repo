@@ -115,9 +115,25 @@ class ExerciseInfo extends StatelessWidget {
                 width: 20,
                 height: 20,
               ),
-              title: "Hello",
+              title: "Exercise Overview",
               children: [
-                SizedBox(width: 400, height: 200,)
+                Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    SvgPicture.asset(
+                      'assets/icons/dumbbell-large-svgrepo-com.svg',
+                      width: 20,
+                      height: 20,
+                    ),
+                    SizedBox(width: 8),
+                    Text(
+                      "Target Muscles",
+                      style: TextStyle(
+                        fontSize: 18
+                      ),
+                    )
+                  ],
+                )
               ],
             )
           ]
