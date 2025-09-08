@@ -17,31 +17,32 @@ class ContentCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-        child: Padding(
-          padding: const EdgeInsets.all(25),
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Row(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  icon,
-                  SizedBox(width: 8),
-                  Text(
-                      title,
-                      style: TextStyle(
-                        fontSize: 20
-                      ),
-                  )
-                ],
-              ),
-              SizedBox(height: 20),
-              ...children
-            ],
-          ),
-        )
-      );
+      color: Colors.white,
+      child: Padding(
+        padding: const EdgeInsets.all(25),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Row(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                icon,
+                SizedBox(width: 8),
+                Text(
+                    title,
+                    style: TextStyle(
+                      fontSize: 20
+                    ),
+                )
+              ],
+            ),
+            SizedBox(height: 20),
+            ...children
+          ],
+        ),
+      )
+    );
   }
 }
 
