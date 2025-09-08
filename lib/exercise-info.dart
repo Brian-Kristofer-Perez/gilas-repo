@@ -1,6 +1,45 @@
 import 'package:flutter/material.dart';
 
 
+
+class ContentCard extends StatelessWidget {
+  final Icon icon;
+  final String title;
+  final List<Widget> children;
+
+  const ContentCard({
+    Key? key,
+    required this.icon,
+    required this.title,
+    required this.children
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+        child: Padding(
+          padding: const EdgeInsets.all(25),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  icon,
+                  SizedBox(width: 8),
+                  Text(title)
+                ],
+              ),
+              ...children
+            ],
+          ),
+        )
+      );
+  }
+}
+
+
 class TextLabel extends StatelessWidget {
   final String label;
 
@@ -62,7 +101,17 @@ class ExerciseInfo extends StatelessWidget {
         toolbarHeight: 80,
       ),
       body: Center(
-        child: Text("Exercise content here"),
+        child: Column(
+          children: [
+            ContentCard(
+              icon: Icon(Icons.home),
+              title: "Hello",
+              children: [
+                SizedBox(width: 400, height: 200,)
+              ],
+            )
+          ]
+        )
       ),
       backgroundColor: Color(0xFFE6F0FA),
     );
