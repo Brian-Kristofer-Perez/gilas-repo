@@ -1,6 +1,72 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
+class InstructionCard extends StatelessWidget {
+  final String step;
+  final String instruction;
+  final String tip;
+
+  const InstructionCard({
+    Key? key,
+    required this.step,
+    required this.instruction,
+    required this.tip,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 16),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            children: [
+              CircleAvatar(
+                radius: 16,
+                backgroundColor: Colors.black,
+                child: Text(
+                  step,
+                  style: const TextStyle(color: Colors.white),
+                ),
+              ),
+              const SizedBox(width: 12),
+              Expanded(
+                child: Text(
+                  instruction,
+                  style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                ),
+              ),
+            ],
+          ),
+          const SizedBox(height: 8),
+          Padding(
+            padding: const EdgeInsets.only(left: 35.0),
+            child: Container(
+              padding: const EdgeInsets.all(12),
+              decoration: BoxDecoration(
+                color: Colors.yellow[50],
+                borderRadius: BorderRadius.circular(8),
+              ),
+              child: Row(
+                children: [
+                  Icon(Icons.lightbulb_outline, color: Colors.orange),
+                  const SizedBox(width: 8),
+                  Expanded(
+                    child: Text(
+                      tip,
+                      style: const TextStyle(color: Colors.orange, fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
 
 class ContentCard extends StatelessWidget {
   final Widget icon;
@@ -111,7 +177,7 @@ class ExerciseInfo extends StatelessWidget {
         toolbarHeight: 80,
       ),
       body: Center(
-        child: Column(
+        child: ListView(
           children: [
             ContentCard(
               icon: SvgPicture.asset(
@@ -228,6 +294,28 @@ class ExerciseInfo extends StatelessWidget {
                   )
                 )
               ],
+            ),
+            
+            SizedBox(height: 30,),
+            
+            ContentCard(
+                icon: SvgPicture.asset(
+                  "assets/icons/target-svgrepo-com.svg",
+                  width: 20,
+                  height: 20,
+                ),
+                title: "Hello world", 
+                children: [
+                  Column(children: [
+                    InstructionCard(step: '1', instruction: "sample text", tip: "sample tip"),
+                    InstructionCard(step: '2', instruction: "sample text", tip: "sample tip"),
+                    InstructionCard(step: '3', instruction: "sample text", tip: "sample tip"),
+                    InstructionCard(step: '4', instruction: "sample text", tip: "sample tip"),
+                    InstructionCard(step: '5', instruction: "sample text", tip: "sample tip"),
+                    InstructionCard(step: '6', instruction: "sample text", tip: "sample tip"),
+                    InstructionCard(step: '7', instruction: "sample text", tip: "sample tip"),
+                  ],)
+                ]
             )
           ]
         )
