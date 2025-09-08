@@ -251,6 +251,7 @@ class ExerciseInfo extends StatelessWidget {
       ),
       body: Center(
         child: ListView(
+          padding: EdgeInsets.symmetric(vertical: 30.0, horizontal: 150),
           children: [
             ContentCard(
               icon: SvgPicture.asset(
@@ -264,86 +265,89 @@ class ExerciseInfo extends StatelessWidget {
                   mainAxisSize: MainAxisSize.min,
                   children: [
 
-                    Container(
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
+                    Expanded(child:
+                      Container(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
 
-                          Row(
-                            mainAxisSize: MainAxisSize.min,
-                            children: [
-                              SvgPicture.asset(
-                                'assets/icons/muscle-svgrepo-com.svg',
-                                width: 20,
-                                height: 20,
-                              ),
-                              SizedBox(width: 8),
-                              Text(
-                                "Target Muscles",
-                                style: TextStyle(
-                                    fontSize: 18
+                            Row(
+                              mainAxisSize: MainAxisSize.min,
+                              children: [
+                                SvgPicture.asset(
+                                  'assets/icons/muscle-svgrepo-com.svg',
+                                  width: 20,
+                                  height: 20,
                                 ),
-                              ),
-                            ],
-                          ),
+                                SizedBox(width: 8),
+                                Text(
+                                  "Target Muscles",
+                                  style: TextStyle(
+                                      fontSize: 18
+                                  ),
+                                ),
+                              ],
+                            ),
 
-                          SizedBox(height: 8),
+                            SizedBox(height: 8),
 
-                          Row(
-                            mainAxisSize: MainAxisSize.min,
-                            children: [
-                              TextLabel(label: "Chest"),
-                              SizedBox(width: 8),
-                              TextLabel(label: "Front Deltoids"),
-                              SizedBox(width: 8),
-                              TextLabel(label: "Triceps"),
-                            ],
-                          )
-                        ],
+                            Row(
+                              mainAxisSize: MainAxisSize.min,
+                              children: [
+                                TextLabel(label: "Chest"),
+                                SizedBox(width: 8),
+                                TextLabel(label: "Front Deltoids"),
+                                SizedBox(width: 8),
+                                TextLabel(label: "Triceps"),
+                              ],
+                            )
+                          ],
+                        ),
                       ),
                     ),
 
                     SizedBox(width: 100),
 
-                    Container(
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
+                    Expanded(child:
+                      Container(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
 
-                          Row(
-                            mainAxisSize: MainAxisSize.min,
-                            children: [
-                              SvgPicture.asset(
-                                'assets/icons/dumbbell-large-svgrepo-com.svg',
-                                width: 20,
-                                height: 20,
-                              ),
-                              SizedBox(width: 8),
-                              Text(
-                                "Equipment Needed",
-                                style: TextStyle(
-                                    fontSize: 18
+                            Row(
+                              mainAxisSize: MainAxisSize.min,
+                              children: [
+                                SvgPicture.asset(
+                                  'assets/icons/dumbbell-large-svgrepo-com.svg',
+                                  width: 20,
+                                  height: 20,
                                 ),
-                              ),
-                            ],
-                          ),
+                                SizedBox(width: 8),
+                                Text(
+                                  "Equipment Needed",
+                                  style: TextStyle(
+                                      fontSize: 18
+                                  ),
+                                ),
+                              ],
+                            ),
 
-                          SizedBox(height: 8),
+                            SizedBox(height: 8),
 
-                          Row(
-                            mainAxisSize: MainAxisSize.min,
-                            children: [
-                              TextLabel(label: "Barbell"),
-                              SizedBox(width: 8),
-                              TextLabel(label: "Bench"),
-                              SizedBox(width: 8),
-                              TextLabel(label: "Safety Rack"),
-                            ],
-                          )
-                        ],
+                            Row(
+                              mainAxisSize: MainAxisSize.min,
+                              children: [
+                                TextLabel(label: "Barbell"),
+                                SizedBox(width: 8),
+                                TextLabel(label: "Bench"),
+                                SizedBox(width: 8),
+                                TextLabel(label: "Safety Rack"),
+                              ],
+                            )
+                          ],
+                        ),
                       ),
-                    ),
-
+                    )
                   ],
                 ),
                 SizedBox(height: 30,),
