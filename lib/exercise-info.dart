@@ -16,14 +16,14 @@ class TextLabel extends StatelessWidget {
       decoration: BoxDecoration(
         color: Colors.white,
         border: Border.all(
-          color: Colors.black,
-          width: 0.5,
+          color: Colors.grey,
+          width: 1,
         ),
         borderRadius: BorderRadius.circular(4),
       ),
       child: Text(
         label,
-        style: TextStyle(fontSize: 12),
+        style: TextStyle(fontSize: 11),
       ),
     );
   }
