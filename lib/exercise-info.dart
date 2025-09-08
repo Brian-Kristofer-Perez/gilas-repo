@@ -131,9 +131,21 @@ class ExerciseInfo extends StatelessWidget {
                       style: TextStyle(
                         fontSize: 18
                       ),
-                    )
+                    ),
+                  ],
+                ),
+                SizedBox(height: 8),
+                Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    TextLabel(label: "Chest"),
+                    SizedBox(width: 8),
+                    TextLabel(label: "Front Deltoids"),
+                    SizedBox(width: 8),
+                    TextLabel(label: "Triceps"),
                   ],
                 )
+
               ],
             )
           ]
