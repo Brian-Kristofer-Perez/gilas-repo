@@ -34,6 +34,9 @@ class ExerciseInfo extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.white,
+        elevation: 2.0,
+        shadowColor: Colors.black,
         leading: BackButton(
           onPressed: () {
             Navigator.pop(context);
