@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-
+import 'package:flutter_svg/flutter_svg.dart';
 
 
 class ContentCard extends StatelessWidget {
-  final Icon icon;
+  final Widget icon;
   final String title;
   final List<Widget> children;
 
@@ -28,7 +28,12 @@ class ContentCard extends StatelessWidget {
                 children: [
                   icon,
                   SizedBox(width: 8),
-                  Text(title)
+                  Text(
+                      title,
+                      style: TextStyle(
+                        fontSize: 20
+                      ),
+                  )
                 ],
               ),
               ...children
@@ -104,7 +109,11 @@ class ExerciseInfo extends StatelessWidget {
         child: Column(
           children: [
             ContentCard(
-              icon: Icon(Icons.home),
+              icon: SvgPicture.asset(
+                "assets/icons/target-svgrepo-com.svg",
+                width: 20,
+                height: 20,
+              ),
               title: "Hello",
               children: [
                 SizedBox(width: 400, height: 200,)
