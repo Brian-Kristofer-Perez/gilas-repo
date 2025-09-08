@@ -64,6 +64,7 @@ class ExerciseInfo extends StatelessWidget {
       body: Center(
         child: Text("Exercise content here"),
       ),
+      backgroundColor: Color(0xFFE6F0FA),
     );
   }
 }
