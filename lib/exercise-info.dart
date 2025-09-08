@@ -36,6 +36,7 @@ class ContentCard extends StatelessWidget {
                   )
                 ],
               ),
+              SizedBox(height: 20),
               ...children
             ],
           ),
