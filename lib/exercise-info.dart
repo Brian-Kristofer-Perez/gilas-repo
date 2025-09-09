@@ -381,11 +381,11 @@ class ExerciseInfo extends StatelessWidget {
             
             ContentCard(
                 icon: SvgPicture.asset(
-                  "assets/icons/target-svgrepo-com.svg",
+                  "assets/icons/check-circle-svgrepo-com.svg",
                   width: 20,
                   height: 20,
                 ),
-                title: "Hello world", 
+                title: "Step-by-step Instructions",
                 children: [
                   Column(children: [
                     InstructionCard(step: '1', instruction: "sample text", tip: "sample tip"),
