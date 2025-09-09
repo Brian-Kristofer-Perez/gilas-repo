@@ -282,25 +282,37 @@ class ExerciseInfo extends StatelessWidget {
         backgroundColor: Colors.white,
         elevation: 2.0,
         shadowColor: Colors.black,
-        leading: BackButton(
-          onPressed: () {
-            Navigator.pop(context);
-          },
-        ),
-        title: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              "Barbell Press",
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-            ),
-            SizedBox(height: 8),
-            LabelList(
-              labels: ["Push", "Chest"]
-            ),
-          ],
-        ),
         toolbarHeight: 80,
+        leading: SizedBox(width:240),
+        title: Padding(
+          padding: EdgeInsets.only(
+              left:80,
+          ),
+          child: Row(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              BackButton(
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+              ),
+              SizedBox(width: 30),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    "Barbell Press",
+                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                  ),
+                  SizedBox(height: 8),
+                  LabelList(
+                      labels: ["Push", "Chest"]
+                  ),
+                ],
+              ),
+            ],
+          )
+        )
       ),
       body: Center(
         child: ListView(
