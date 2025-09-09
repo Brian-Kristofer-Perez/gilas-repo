@@ -253,6 +253,26 @@ class TextLabel extends StatelessWidget {
   }
 }
 
+class LabelList extends StatelessWidget {
+  final List<String> labels;
+
+  const LabelList({
+    Key? key,
+    required this.labels,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisSize: MainAxisSize.min,
+      children: labels
+          .map((text) => TextLabel(label: text))
+          .toList(),
+    );
+  }
+}
+
+
 class ExerciseInfo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -275,12 +295,8 @@ class ExerciseInfo extends StatelessWidget {
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
             SizedBox(height: 8),
-
-            Row(
-              children: [
-                TextLabel(label: "Label 1"),
-                TextLabel(label: "Label 2"),
-              ],
+            LabelList(
+              labels: ["Push", "Chest"]
             ),
           ],
         ),
@@ -327,14 +343,8 @@ class ExerciseInfo extends StatelessWidget {
                             ),
 
                             SizedBox(height: 8),
-
-                            Row(
-                              mainAxisSize: MainAxisSize.min,
-                              children: [
-                                TextLabel(label: "Chest"),
-                                TextLabel(label: "Front Deltoids"),
-                                TextLabel(label: "Triceps"),
-                              ],
+                            LabelList(
+                              labels: ["Chest", "Front Deltoids", "Triceps"]
                             )
                           ],
                         ),
@@ -369,13 +379,8 @@ class ExerciseInfo extends StatelessWidget {
 
                             SizedBox(height: 8),
 
-                            Row(
-                              mainAxisSize: MainAxisSize.min,
-                              children: [
-                                TextLabel(label: "Barbell"),
-                                TextLabel(label: "Bench"),
-                                TextLabel(label: "Safety Rack"),
-                              ],
+                            LabelList(
+                              labels: ["Barbell", "Bench", "Safety Rack"],
                             )
                           ],
                         ),
