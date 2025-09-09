@@ -73,6 +73,37 @@ class MistakesList extends StatelessWidget {
   }
 }
 
+class InstructionList extends StatelessWidget {
+  final List<String> instructions;
+  final List<String> tips;
+
+  const InstructionList({
+    Key? key,
+    required this.instructions,
+    required this.tips,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+
+    // Note: Data is hardcoded json, but good practice anyway just to be safe
+    assert(
+    instructions.length == tips.length,
+    "Instructions and tips must have the same length",
+    );
+
+    return Column(
+      children: List.generate(instructions.length, (index) {
+        return InstructionCard(
+          step: (index + 1).toString(),
+          instruction: instructions[index],
+          tip: tips[index],
+        );
+      }),
+    );
+  }
+}
+
 class InstructionCard extends StatelessWidget {
   final String step;
   final String instruction;
@@ -390,15 +421,22 @@ class ExerciseInfo extends StatelessWidget {
                 ),
                 title: "Step-by-step Instructions",
                 children: [
-                  Column(children: [
-                    InstructionCard(step: '1', instruction: "sample text", tip: "sample tip"),
-                    InstructionCard(step: '2', instruction: "sample text", tip: "sample tip"),
-                    InstructionCard(step: '3', instruction: "sample text", tip: "sample tip"),
-                    InstructionCard(step: '4', instruction: "sample text", tip: "sample tip"),
-                    InstructionCard(step: '5', instruction: "sample text", tip: "sample tip"),
-                    InstructionCard(step: '6', instruction: "sample text", tip: "sample tip"),
-                    InstructionCard(step: '7', instruction: "sample text", tip: "sample tip"),
-                  ],)
+                  InstructionList(
+                    instructions: [
+                      "Start in a high plank position with your hands directly under your shoulders.",
+                      "Keep your body in a straight line from head to heels.",
+                      "Lower your chest toward the ground by bending your elbows.",
+                      "Pause briefly when your chest is just above the floor.",
+                      "Push back up to the starting position by straightening your arms.",
+                    ],
+                    tips: [
+                      "Engage your core to prevent your hips from sagging.",
+                      "Keep your neck neutral by looking slightly ahead of you.",
+                      "Don’t let your elbows flare out too wide.",
+                      "Go slow for better control and muscle activation.",
+                      "Breathe out as you push up, and inhale as you lower.",
+                    ],
+                  ),
                 ]
             ),
 
