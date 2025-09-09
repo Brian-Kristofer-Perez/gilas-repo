@@ -144,12 +144,14 @@ class ContentCard extends StatelessWidget {
   final Widget icon;
   final String title;
   final List<Widget> children;
+  final Color color;
 
   const ContentCard({
     Key? key,
     required this.icon,
     required this.title,
-    required this.children
+    required this.children,
+    this.color = Colors.black
   }) : super(key: key);
 
   @override
@@ -170,7 +172,8 @@ class ContentCard extends StatelessWidget {
                 Text(
                     title,
                     style: TextStyle(
-                      fontSize: 20
+                      fontSize: 20,
+                      color: color
                     ),
                 )
               ],
@@ -403,11 +406,13 @@ class ExerciseInfo extends StatelessWidget {
 
             ContentCard(
                 icon: SvgPicture.asset(
-                  "assets/icons/target-svgrepo-com.svg",
-                  width: 20,
-                  height: 20,
+                  "assets/icons/warning-svgrepo-com.svg",
+                  width: 25,
+                  height: 25,
+                  color: Colors.red,
                 ),
-                title: "Hello world",
+                title: "Common Mistakes",
+                color: Colors.red,
                 children: [
                   MistakesList(mistakes: [
                     "Bouncing the bar off the chest",
@@ -424,11 +429,13 @@ class ExerciseInfo extends StatelessWidget {
 
             ContentCard(
                 icon: SvgPicture.asset(
-                  "assets/icons/target-svgrepo-com.svg",
-                  width: 20,
-                  height: 20,
+                  "assets/icons/lightning-svgrepo-com.svg",
+                  width: 25,
+                  height: 25,
+                  color: Colors.green,
                 ),
-                title: "Hello world",
+                title: "Benefits",
+                color: Colors.green,
                 children: [
                   Column(children: [
                     BenefitsList(
