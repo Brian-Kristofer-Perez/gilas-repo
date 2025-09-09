@@ -229,23 +229,26 @@ class TextLabel extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: EdgeInsets.symmetric(horizontal: 8, vertical: 4),
-      decoration: BoxDecoration(
-        color: Colors.white,
-        border: Border.all(
-          color: Color(0xD0C0C0C0),
-          width: 1,
+    return Padding(
+      padding: EdgeInsets.symmetric(vertical: 0, horizontal: 4),
+      child: Container(
+        padding: EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+        decoration: BoxDecoration(
+          color: Colors.white,
+          border: Border.all(
+            color: Color(0xD0C0C0C0),
+            width: 1,
+          ),
+          borderRadius: BorderRadius.circular(8),
         ),
-        borderRadius: BorderRadius.circular(8),
-      ),
-      child: Text(
-        label,
-        style: TextStyle(
-          fontSize: 11,
-          fontWeight: FontWeight.bold
+        child: Text(
+          label,
+          style: TextStyle(
+              fontSize: 11,
+              fontWeight: FontWeight.bold
+          ),
         ),
-      ),
+      )
     );
   }
 }
@@ -272,10 +275,10 @@ class ExerciseInfo extends StatelessWidget {
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
             SizedBox(height: 8),
+
             Row(
               children: [
                 TextLabel(label: "Label 1"),
-                SizedBox(width: 8),
                 TextLabel(label: "Label 2"),
               ],
             ),
@@ -329,9 +332,7 @@ class ExerciseInfo extends StatelessWidget {
                               mainAxisSize: MainAxisSize.min,
                               children: [
                                 TextLabel(label: "Chest"),
-                                SizedBox(width: 8),
                                 TextLabel(label: "Front Deltoids"),
-                                SizedBox(width: 8),
                                 TextLabel(label: "Triceps"),
                               ],
                             )
@@ -372,9 +373,7 @@ class ExerciseInfo extends StatelessWidget {
                               mainAxisSize: MainAxisSize.min,
                               children: [
                                 TextLabel(label: "Barbell"),
-                                SizedBox(width: 8),
                                 TextLabel(label: "Bench"),
-                                SizedBox(width: 8),
                                 TextLabel(label: "Safety Rack"),
                               ],
                             )
