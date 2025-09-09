@@ -355,18 +355,22 @@ class ExerciseInfo extends StatelessWidget {
                 Container(
                   decoration: BoxDecoration(
                     border: Border.all(
-                      color: Colors.cyan
+                      color: Colors.indigo
                     ),
-                    color: Colors.cyan.withAlpha(20),
+                    color: Colors.indigoAccent.withAlpha(20),
                     borderRadius: BorderRadius.all(Radius.circular(10)),
                   ),
                   child: Padding(
                     padding: EdgeInsets.all(10),
-                    child: Text(
-                        "Focus on controlled movement and full range of motion",
-                        style: TextStyle(
-                            color: Colors.cyan
-                        ),
+                    child: Row(
+                      children: [
+                        Text(
+                            "Focus on controlled movement and full range of motion",
+                            style: TextStyle(
+                                color: Colors.indigo
+                            ),
+                        )
+                      ]
                     )
                   )
                 )
