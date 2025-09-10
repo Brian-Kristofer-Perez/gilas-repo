@@ -336,70 +336,64 @@ class ExerciseInfo extends StatelessWidget {
                   mainAxisSize: MainAxisSize.min,
                   children: [
                     Expanded(
-                      child:
-                      Container(
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Row(
-                              mainAxisSize: MainAxisSize.min,
-                              children: [
-                                SvgPicture.asset(
-                                  'assets/icons/muscle-svgrepo-com.svg',
-                                  width: 20,
-                                  height: 20,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Row(
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              SvgPicture.asset(
+                                'assets/icons/muscle-svgrepo-com.svg',
+                                width: 20,
+                                height: 20,
+                              ),
+                              SizedBox(width: 8),
+                              Text(
+                                "Target Muscles",
+                                style: TextStyle(
+                                    fontSize: 18
                                 ),
-                                SizedBox(width: 8),
-                                Text(
-                                  "Target Muscles",
-                                  style: TextStyle(
-                                      fontSize: 18
-                                  ),
-                                ),
-                              ],
-                            ),
+                              ),
+                            ],
+                          ),
 
-                            SizedBox(height: 8),
-                            LabelList(
-                              labels: List<String>.from(exercise["muscle_groups"])
-                            )
-                          ],
-                        ),
+                          SizedBox(height: 8),
+
+                          LabelList(
+                            labels: List<String>.from(exercise["muscle_groups"])
+                          )
+                        ],
                       ),
                     ),
 
-                    SizedBox(width: 100),
-
-                    Expanded(child:
-                      Container(
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Row(
-                              mainAxisSize: MainAxisSize.min,
-                              children: [
-                                SvgPicture.asset(
-                                  'assets/icons/dumbbell-large-svgrepo-com.svg',
-                                  width: 20,
-                                  height: 20,
+                    Expanded(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Row(
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              SvgPicture.asset(
+                                'assets/icons/dumbbell-large-svgrepo-com.svg',
+                                width: 20,
+                                height: 20,
+                              ),
+                              SizedBox(width: 8),
+                              Text(
+                                "Equipment Needed",
+                                style: TextStyle(
+                                    fontSize: 18
                                 ),
-                                SizedBox(width: 8),
-                                Text(
-                                  "Equipment Needed",
-                                  style: TextStyle(
-                                      fontSize: 18
-                                  ),
-                                ),
-                              ],
-                            ),
+                              ),
+                            ],
+                          ),
 
-                            SizedBox(height: 8),
+                          SizedBox(height: 8),
 
-                            LabelList(
-                              labels: List<String>.from(exercise["equipment"])
-                            )
-                          ],
-                        ),
+                          LabelList(
+                            labels: List<String>.from(exercise["equipment"])
+                          )
+                        ],
                       ),
                     )
                   ],
