@@ -1,0 +1,655 @@
+{
+    "bicep_curl": {
+        "name": "Bicep Curl",
+        "muscle_groups": [ "biceps" ],
+        "equipment": [ "dumbbell", "barbell", "cable" ],
+        "category": "pull",
+        "description": "The classic isolation exercise for biceps using dumbbells or a barbell.",
+        "sets": "3",
+        "reps": "10–12",
+        "step_by_step": [
+            {
+                "step": "Hold weights at your sides with palms facing forward.",
+                "tips": "Keep elbows close to your torso and avoid swinging the weights."
+            },
+            {
+                "step": "Curl the weights up by bending your elbows.",
+                "tips": "Focus on squeezing the biceps at the top."
+            },
+            {
+                "step": "Lower slowly back to starting position.",
+                "tips": "Control the movement to engage the muscle fully."
+            }
+        ],
+        "benefits": [ "Builds biceps strength and size", "Improves arm aesthetics", "Enhances grip strength" ],
+        "common_mistakes": [ "Swinging the weights", "Using back to lift", "Elbows flaring out" ]
+    },
+    "bench_press": {
+        "name": "Bench Press",
+        "muscle_groups": [ "chest", "shoulders", "triceps" ],
+        "equipment": [ "barbell", "dumbbell", "machine" ],
+        "category": "push",
+        "description": "The bench press is a weight training exercise where you lie on a bench and push a barbell or dumbbells upward to strengthen your chest, shoulders, and arms. Variations include incline and decline bench press.",
+        "sets": "3",
+        "reps": "5–12",
+        "step_by_step": [
+            {
+                "step": "Lie flat on a bench with feet on the floor.",
+                "tips": "Keep your back flat and feet planted for stability."
+            },
+            {
+                "step": "Hold the barbell (or dumbbells) slightly wider than shoulder-width.",
+                "tips": "Ensure wrists are straight to avoid strain."
+            },
+            {
+                "step": "Lower the weight slowly to your chest.",
+                "tips": "Control the descent and avoid bouncing the bar off your chest."
+            },
+            {
+                "step": "Push it back up until your arms are straight.",
+                "tips": "Engage your chest and triceps to lift smoothly."
+            }
+        ],
+        "benefits": [ "Builds chest, shoulder, and tricep strength", "Improves upper body pushing power", "Enhances overall upper body mass" ],
+        "common_mistakes": [ "Arching back excessively", "Bouncing bar off chest", "Flaring elbows too wide" ]
+    },
+    "calf_raises": {
+        "name": "Calf Raises",
+        "muscle_groups": [ "calves" ],
+        "equipment": [ "bodyweight" ],
+        "category": "leg",
+        "description": "A bodyweight exercise that strengthens calf muscles.",
+        "sets": "3",
+        "reps": "12–15",
+        "step_by_step": [
+            {
+                "step": "Stand upright, feet hip-width apart.",
+                "tips": "Keep your posture straight and core engaged."
+            },
+            {
+                "step": "Push through balls of feet to raise heels off the ground.",
+                "tips": "Rise slowly and fully extend the calves at the top."
+            },
+            {
+                "step": "Lower slowly back down.",
+                "tips": "Control the descent to maximize muscle engagement."
+            }
+        ],
+        "benefits": [ "Strengthens calf muscles", "Improves ankle stability", "Enhances jump performance" ],
+        "common_mistakes": [ "Bouncing", "Leaning forward/backward", "Not going through full range of motion" ]
+    },
+    "chest_fly": {
+        "name": "Chest Fly",
+        "muscle_groups": [ "chest" ],
+        "equipment": [ "dumbbell", "cable", "machine" ],
+        "category": "push",
+        "description": "The chest fly isolates the chest by opening and closing the arms in a wide arc, similar to a hugging motion. Can be done with dumbbells on a bench or with cables.",
+        "sets": "2–3",
+        "reps": "8–12",
+        "step_by_step": [
+            {
+                "step": "Lie on a flat bench (or stand between cables) with arms extended, elbows slightly bent.",
+                "tips": "Maintain a small bend in elbows to protect joints."
+            },
+            {
+                "step": "Slowly open your arms wide to stretch your chest.",
+                "tips": "Move in a controlled manner; don’t let gravity do the work."
+            },
+            {
+                "step": "Bring your arms back together in front of you, keeping elbows slightly bent.",
+                "tips": "Focus on squeezing the chest at the top."
+            }
+        ],
+        "benefits": [ "Isolates chest muscles", "Improves chest definition", "Increases shoulder stability" ],
+        "common_mistakes": [ "Locking elbows", "Using momentum", "Not controlling the weights" ]
+    },
+    "deadlift": {
+        "name": "Deadlift",
+        "muscle_groups": [ "back", "glutes", "hamstrings"],
+        "equipment": [ "barbell", "dumbbell" ],
+        "category": "pull",
+        "description": "A compound lift that strengthens the back, glutes, hamstrings, and core.",
+        "sets": "3–4",
+        "reps": "5–8",
+        "step_by_step": [
+            {
+                "step": "Stand with feet hip-width apart, barbell over mid-foot.",
+                "tips": "Keep your back straight and chest up."
+            },
+            {
+                "step": "Bend at hips and knees, grip the bar.",
+                "tips": "Use a strong grip and engage lats."
+            },
+            {
+                "step": "Lift with straight back until standing tall.",
+                "tips": "Drive through heels and keep bar close to body."
+            },
+            {
+                "step": "Lower with control back to start.",
+                "tips": "Maintain spine alignment and avoid rounding the back."
+            }
+        ],
+        "benefits": [ "Builds total body strength", "Enhances posterior chain", "Improves posture and core stability" ],
+        "common_mistakes": [ "Rounding back", "Jerking the weight", "Not engaging core" ]
+    },
+    "diamond_push_up": {
+        "name": "Diamond Push Up",
+        "muscle_groups": [ "triceps", "chest", "shoulders" ],
+        "equipment": [ "bodyweight" ],
+        "category": "push",
+        "description": "A push-up variation that emphasizes triceps by placing the hands close together under the chest.",
+        "sets": "3",
+        "reps": "8–12",
+        "step_by_step": [
+            {
+                "step": "Start in plank position with hands forming a diamond under your chest.",
+                "tips": "Keep hands close together and elbows pointing backward."
+            },
+            {
+                "step": "Lower your body, keeping elbows close to sides.",
+                "tips": "Go down slowly to maximize tricep engagement."
+            },
+            {
+                "step": "Push back up to starting position.",
+                "tips": "Keep core tight and body straight throughout."
+            }
+        ],
+        "benefits": [ "Targets triceps intensely", "Strengthens chest and shoulders", "Improves core stability" ],
+        "common_mistakes": [ "Flaring elbows", "Dropping hips", "Incomplete range of motion" ]
+    },
+    "dips": {
+        "name": "Dips",
+        "muscle_groups": [ "triceps", "chest", "shoulders" ],
+        "equipment": [ "bodyweight", "dip bars" ],
+        "category": "push",
+        "description": "Dips target the triceps, chest, and shoulders using your body weight. Can be done on parallel bars or a bench.",
+        "sets": "3",
+        "reps": "8–12",
+        "step_by_step": [
+            {
+                "step": "Place your hands on parallel bars or the edge of a bench.",
+                "tips": "Keep shoulders down and chest slightly forward."
+            },
+            {
+                "step": "Lower your body by bending elbows until arms are at 90 degrees.",
+                "tips": "Control the descent; don’t bounce."
+            },
+            {
+                "step": "Push yourself back up until arms are straight.",
+                "tips": "Focus on triceps engagement and keep torso upright."
+            }
+        ],
+        "benefits": [ "Builds triceps and chest strength", "Enhances shoulder stability", "Can be done anywhere with minimal equipment" ],
+        "common_mistakes": [ "Elbows flaring out", "Leaning too far forward", "Incomplete range of motion" ]
+    },
+    "face_pull": {
+        "name": "Face Pull",
+        "muscle_groups": [ "rear delts", "traps", "shoulders" ],
+        "equipment": [ "cable" ],
+        "category": "pull",
+        "description": "An exercise that targets rear delts and upper traps, improving posture and shoulder health.",
+        "sets": "3",
+        "reps": "12–15",
+        "step_by_step": [
+            {
+                "step": "Attach a rope to a cable machine at upper chest height.",
+                "tips": "Grip rope with palms facing each other."
+            },
+            {
+                "step": "Pull the rope toward your face, elbows high.",
+                "tips": "Focus on squeezing shoulder blades together."
+            },
+            {
+                "step": "Return slowly with control.",
+                "tips": "Maintain tension on the muscles throughout."
+            }
+        ],
+        "benefits": [ "Strengthens rear delts and traps", "Improves posture", "Enhances shoulder health" ],
+        "common_mistakes": [ "Using momentum", "Lowering elbows too early", "Shrugging shoulders" ]
+    },
+    "hammer_curl": {
+        "name": "Hammer Curl",
+        "muscle_groups": [ "biceps", "forearms" ],
+        "equipment": [ "dumbbell" ],
+        "category": "pull",
+        "description": "Targets both biceps and forearms with a neutral grip.",
+        "sets": "3",
+        "reps": "10–12",
+        "step_by_step": [
+            {
+                "step": "Hold dumbbells at your sides, palms facing inward.",
+                "tips": "Keep elbows tucked close to torso."
+            },
+            {
+                "step": "Curl the weights upward, keeping palms facing in.",
+                "tips": "Focus on forearm and bicep contraction."
+            },
+            {
+                "step": "Lower slowly with control.",
+                "tips": "Avoid swinging weights; maintain slow, steady motion."
+            }
+        ],
+        "benefits": [ "Builds biceps and forearm strength", "Improves grip", "Enhances arm aesthetics" ],
+        "common_mistakes": [ "Swinging weights", "Elbows moving forward", "Rushing the movement" ]
+    },
+    "lat_pulldown": {
+        "name": "Lat Pulldown",
+        "muscle_groups": [ "lats", "upper back" ],
+        "equipment": [ "machine", "cable" ],
+        "category": "pull",
+        "description": "A machine exercise that targets the lats and upper back, mimicking the pull-up motion.",
+        "sets": "3",
+        "reps": "8–12",
+        "step_by_step": [
+            {
+                "step": "Sit at a lat pulldown machine and grab the bar wider than shoulders.",
+                "tips": "Keep chest up and shoulders back."
+            },
+            {
+                "step": "Pull the bar down to your chest, squeezing the lats.",
+                "tips": "Focus on engaging back muscles, not arms."
+            },
+            {
+                "step": "Slowly return the bar overhead.",
+                "tips": "Control the movement and avoid leaning back excessively."
+            }
+        ],
+        "benefits": [ "Strengthens lats and upper back", "Improves pulling strength", "Enhances posture" ],
+        "common_mistakes": [ "Using momentum", "Leaning back too far", "Pulling with arms only" ]
+    },
+    "lateral_raises": {
+        "name": "Lateral Raises",
+        "muscle_groups": [ "shoulders" ],
+        "equipment": [ "dumbbell" ],
+        "category": "push",
+        "description": "An isolation exercise that targets the side delts, helping build wider shoulders. Usually performed with dumbbells.",
+        "sets": "3–4",
+        "reps": "8–12",
+        "step_by_step": [
+            {
+                "step": "Hold a dumbbell in each hand at your sides, palms facing inward.",
+                "tips": "Keep a slight bend in your elbows and core engaged."
+            },
+            {
+                "step": "Slightly lean forward at the hips, keeping back straight.",
+                "tips": "Maintain spine alignment and avoid arching."
+            },
+            {
+                "step": "Raise arms out to the sides until shoulder height.",
+                "tips": "Lift with control, avoid momentum."
+            },
+            {
+                "step": "Lower slowly with control.",
+                "tips": "Focus on engaging the side delts throughout."
+            }
+        ],
+        "benefits": [ "Builds side delts for wider shoulders", "Improves shoulder stability", "Enhances upper body aesthetics" ],
+        "common_mistakes": [ "Swinging arms", "Raising too high or too low", "Shrugging shoulders" ]
+    },
+    "leg_curl": {
+        "name": "Leg Curl",
+        "muscle_groups": [ "hamstrings" ],
+        "equipment": [ "machine" ],
+        "category": "leg",
+        "description": "An isolation exercise for the hamstrings, usually done on a machine.",
+        "sets": "3",
+        "reps": "10–12",
+        "step_by_step": [
+            {
+                "step": "Lie face down on a leg curl machine.",
+                "tips": "Adjust pads so they sit just above your heels."
+            },
+            {
+                "step": "Hook ankles under the pads.",
+                "tips": "Keep hips pressed against the bench."
+            },
+            {
+                "step": "Curl your legs upward toward glutes.",
+                "tips": "Control the movement and squeeze hamstrings at top."
+            },
+            {
+                "step": "Lower slowly with control.",
+                "tips": "Avoid letting the weights drop."
+            }
+        ],
+        "benefits": [ "Isolates and strengthens hamstrings", "Improves knee stability", "Enhances athletic performance" ],
+        "common_mistakes": [ "Lifting hips off bench", "Using momentum", "Incomplete range of motion" ]
+    },
+    "leg_extension": {
+        "name": "Leg Extension",
+        "muscle_groups": [ "quads" ],
+        "equipment": [ "machine" ],
+        "category": "leg",
+        "description": "An isolation machine exercise targeting the quadriceps.",
+        "sets": "3",
+        "reps": "10–12",
+        "step_by_step": [
+            {
+                "step": "Sit at a leg extension machine with pads on your shins.",
+                "tips": "Adjust seat so knees align with machine axis."
+            },
+            {
+                "step": "Extend legs fully, squeezing the quads.",
+                "tips": "Move slowly and controlled."
+            },
+            {
+                "step": "Lower slowly back down.",
+                "tips": "Maintain tension; avoid letting weight drop."
+            }
+        ],
+        "benefits": [ "Isolates quadriceps", "Strengthens knee extension", "Improves leg definition" ],
+        "common_mistakes": [ "Using too much momentum", "Partial range of motion", "Incorrect knee alignment" ]
+    },
+    "lunge": {
+        "name": "Lunge",
+        "muscle_groups": [ "quads", "glutes" ],
+        "equipment": [ "bodyweight", "dumbbell", "barbell" ],
+        "category": "leg",
+        "description": "Targets quads and glutes, improving balance and unilateral strength.",
+        "sets": "3",
+        "reps": "8–10 (each leg)",
+        "step_by_step": [
+            {
+                "step": "Step forward with one leg.",
+                "tips": "Keep chest upright and core engaged."
+            },
+            {
+                "step": "Lower until both knees are at 90 degrees.",
+                "tips": "Front knee should stay above ankle, not go past toes."
+            },
+            {
+                "step": "Push back up to standing.",
+                "tips": "Drive through the heel of the front foot."
+            },
+            {
+                "step": "Alternate legs.",
+                "tips": "Maintain balance and control throughout."
+            }
+        ],
+        "benefits": [ "Strengthens quads and glutes", "Improves balance and unilateral strength", "Enhances mobility" ],
+        "common_mistakes": [ "Knee going past toes", "Leaning forward", "Incomplete range of motion" ]
+    },
+    "overhead_press": {
+        "name": "Overhead Press",
+        "muscle_groups": [ "shoulders", "triceps" ],
+        "equipment": [ "dumbbell", "barbell" ],
+        "category": "push",
+        "description": "The overhead press mainly targets the shoulders and can be done standing or seated, with dumbbells or a barbell.",
+        "sets": "3",
+        "reps": "8–12",
+        "step_by_step": [
+            {
+                "step": "Hold a barbell or dumbbells at shoulder height with palms facing forward.",
+                "tips": "Keep core tight and spine neutral."
+            },
+            {
+                "step": "Press the weight upward until arms are fully extended overhead.",
+                "tips": "Lead with elbows slightly forward, not flared out."
+            },
+            {
+                "step": "Slowly lower it back to shoulder height.",
+                "tips": "Control the descent to protect shoulder joints."
+            }
+        ],
+        "benefits": [ "Builds shoulder and triceps strength", "Improves overhead pushing power", "Enhances upper body stability" ],
+        "common_mistakes": [ "Arching back excessively", "Flaring elbows", "Using momentum" ]
+    },
+    "overhead_triceps_extension": {
+        "name": "Overhead Triceps Extension",
+        "muscle_groups": [ "triceps" ],
+        "equipment": [ "dumbbell", "cable" ],
+        "category": "push",
+        "description": "An isolation exercise for the triceps, usually done with a dumbbell or cable.",
+        "sets": "3",
+        "reps": "8–12",
+        "step_by_step": [
+            {
+                "step": "Hold a dumbbell with both hands and raise it overhead.",
+                "tips": "Keep elbows close to your head."
+            },
+            {
+                "step": "Lower the dumbbell behind your head by bending elbows.",
+                "tips": "Move slowly and control the weight."
+            },
+            {
+                "step": "Press back up to full extension.",
+                "tips": "Focus on triceps contraction, avoid flaring elbows."
+            }
+        ],
+        "benefits": [ "Isolates and strengthens triceps", "Improves arm definition", "Supports elbow stability" ],
+        "common_mistakes": [ "Flaring elbows", "Using too much weight", "Bending wrists" ]
+    },
+    "preacher_curl": {
+        "name": "Preacher Curl",
+        "muscle_groups": [ "biceps" ],
+        "equipment": [ "dumbbell", "barbell", "machine" ],
+        "category": "pull",
+        "description": "Biceps isolation exercise using a preacher bench and barbell or dumbbells.",
+        "sets": "3",
+        "reps": "8–12",
+        "step_by_step": [
+            {
+                "step": "Sit at a preacher bench with arms extended over the pad.",
+                "tips": "Keep back straight and chest against pad."
+            },
+            {
+                "step": "Curl the barbell or dumbbell up towards your shoulders.",
+                "tips": "Focus on slow, controlled movement."
+            },
+            {
+                "step": "Lower back down slowly with control.",
+                "tips": "Avoid letting the weights drop quickly."
+            }
+        ],
+        "benefits": [ "Isolates biceps", "Prevents swinging", "Improves muscle peak" ],
+        "common_mistakes": [ "Lifting elbows off pad", "Using momentum", "Incomplete range of motion" ]
+    },
+    "pull_up": {
+        "name": "Pull Up",
+        "muscle_groups": [ "lats", "upper back", "biceps" ],
+        "equipment": [ "bodyweight", "pull-up bar", "assisted pull-up machine" ],
+        "category": "pull",
+        "description": "A bodyweight exercise that strengthens the lats, upper back, and biceps.",
+        "sets": "3",
+        "reps": "6–12",
+        "step_by_step": [
+            {
+                "step": "Hang from a bar with palms facing away (shoulder-width).",
+                "tips": "Engage shoulders and core."
+            },
+            {
+                "step": "Pull yourself up until your chin clears the bar.",
+                "tips": "Focus on squeezing lats and keeping elbows close."
+            },
+            {
+                "step": "Lower slowly with control.",
+                "tips": "Avoid dropping quickly; maintain tension."
+            }
+        ],
+        "benefits": [ "Strengthens lats and upper back", "Improves pulling strength", "Builds biceps" ],
+        "common_mistakes": [ "Using momentum", "Partial range of motion", "Swinging body" ]
+    },
+    "push_up": {
+        "name": "Push Up",
+        "muscle_groups": [ "chest", "shoulders", "triceps" ],
+        "equipment": [ "bodyweight" ],
+        "category": "push",
+        "description": "The push-up is a bodyweight exercise that works the chest, shoulders, and triceps. It needs no equipment and can be done anywhere, with variations like incline, decline, diamond and more.",
+        "sets": "2–3",
+        "reps": "8–10",
+        "step_by_step": [
+            {
+                "step": "Start in a plank position with hands under your shoulders.",
+                "tips": "Engage core and keep body straight."
+            },
+            {
+                "step": "Bend elbows to lower your chest toward the floor.",
+                "tips": "Lower slowly and controlled."
+            },
+            {
+                "step": "Push through your palms to return to the starting position.",
+                "tips": "Keep core tight, avoid sagging hips."
+            }
+        ],
+        "benefits": [ "Strengthens chest, shoulders, and triceps", "Improves core stability", "No equipment needed" ],
+        "common_mistakes": [ "Sagging hips", "Flaring elbows", "Incomplete range of motion" ]
+    },
+    "rear_delt_fly": {
+        "name": "Rear Delt Fly",
+        "muscle_groups": [ "rear delts", "shoulders" ],
+        "equipment": [ "dumbbell", "cable", "machine" ],
+        "category": "pull",
+        "description": "Targets the rear deltoids, improving shoulder balance and posture. Can be done with dumbbells or cables.",
+        "sets": "3",
+        "reps": "10–12",
+        "step_by_step": [
+            {
+                "step": "Hold a dumbbell in each hand, hinge forward at hips, back straight.",
+                "tips": "Maintain a slight bend in elbows."
+            },
+            {
+                "step": "Let your arms hang down with slight elbow bend.",
+                "tips": "Relax shoulders, avoid shrugging."
+            },
+            {
+                "step": "Raise arms out to the sides until at shoulder level.",
+                "tips": "Move slowly, squeeze shoulder blades."
+            },
+            {
+                "step": "Lower slowly with control.",
+                "tips": "Maintain tension on rear delts throughout."
+            }
+        ],
+        "benefits": [ "Strengthens rear delts", "Improves posture", "Balances shoulder development" ],
+        "common_mistakes": [ "Using momentum", "Shrugging shoulders", "Locking elbows" ]
+    },
+    "shrugs": {
+        "name": "Shrugs",
+        "muscle_groups": [ "traps", "shoulders" ],
+        "equipment": [ "dumbbell", "barbell" ],
+        "category": "pull",
+        "description": "Isolation move for the traps and upper shoulders, usually performed with dumbbells or a barbell.",
+        "sets": "3–4",
+        "reps": "10–15",
+        "step_by_step": [
+            {
+                "step": "Hold dumbbells at your sides, arms straight.",
+                "tips": "Keep neck relaxed and core engaged."
+            },
+            {
+                "step": "Lift (shrug) your shoulders as high as possible.",
+                "tips": "Pause at the top and squeeze traps."
+            },
+            {
+                "step": "Lower slowly back down.",
+                "tips": "Avoid dropping weights; maintain control."
+            }
+        ],
+        "benefits": [ "Builds traps strength", "Enhances upper back aesthetics", "Improves posture" ],
+        "common_mistakes": [ "Using momentum", "Rolling shoulders", "Shrugging too quickly" ]
+    },
+    "squat": {
+        "name": "Squat",
+        "muscle_groups": [ "quads", "glutes"],
+        "equipment": [ "bodyweight", "dumbbell", "barbell", "smith machine" ],
+        "category": "leg",
+        "description": "A fundamental lower body exercise that strengthens quads, glutes, and core.",
+        "sets": "3–4",
+        "reps": "8–12",
+        "step_by_step": [
+            {
+                "step": "Stand with feet shoulder-width apart.",
+                "tips": "Keep chest up and core engaged."
+            },
+            {
+                "step": "Bend knees and hips to lower into a squat, chest upright.",
+                "tips": "Knees should track over toes."
+            },
+            {
+                "step": "Push back up through heels to standing.",
+                "tips": "Engage glutes and maintain posture."
+            }
+        ],
+        "benefits": [ "Strengthens quads, glutes, and core", "Improves lower body power", "Enhances mobility" ],
+        "common_mistakes": [ "Knees caving in", "Leaning forward", "Not going deep enough" ]
+    },
+    "weighted_calf_raises": {
+        "name": "Weighted Calf Raises",
+        "muscle_groups": [ "calves" ],
+        "equipment": [ "dumbbell", "barbell", "bodyweight" ],
+        "category": "leg",
+        "description": "Calf raises with added weight, usually dumbbells or a barbell.",
+        "sets": "3–4",
+        "reps": "10–12",
+        "step_by_step": [
+            {
+                "step": "Hold dumbbells at your sides or a barbell on your shoulders.",
+                "tips": "Keep spine neutral and core engaged."
+            },
+            {
+                "step": "Raise heels off the ground by pushing through the balls of your feet.",
+                "tips": "Lift slowly and fully extend calves at top."
+            },
+            {
+                "step": "Lower slowly back down.",
+                "tips": "Control the descent to maximize muscle activation."
+            }
+        ],
+        "benefits": [ "Strengthens calves", "Improves ankle stability", "Supports jumping and running" ],
+        "common_mistakes": [ "Bouncing", "Leaning forward/backward", "Partial range of motion" ]
+    },
+    "hip_extension": {
+        "name": "Hip Extension",
+        "muscle_groups": [ "hamstrings", "glutes" ],
+        "equipment": [ "bodyweight", "barbell", "dumbbell", "machine" ],
+        "category": "leg",
+        "description": "Targets hamstrings and glutes through hip hinge movements.",
+        "sets": "3",
+        "reps": "8–10",
+        "step_by_step": [
+            {
+                "step": "Stand tall and hinge forward at the hips, keeping back straight.",
+                "tips": "Engage core and avoid rounding back."
+            },
+            {
+                "step": "Extend hips back up to standing.",
+                "tips": "Squeeze glutes at the top."
+            },
+            {
+                "step": "Can be weighted with a barbell (Romanian deadlift).",
+                "tips": "Use moderate weight and controlled movement."
+            }
+        ],
+        "benefits": [ "Strengthens hamstrings and glutes", "Improves hip mobility", "Supports posterior chain development" ],
+        "common_mistakes": [ "Rounding back", "Using momentum", "Not engaging glutes" ]
+    },
+    "hip_thrust": {
+        "name": "Hip Thrust",
+        "muscle_groups": [ "glutes" ],
+        "equipment": [ "bodyweight", "barbell", "dumbbell", "bench" ],
+        "category": "leg",
+        "description": "Targets the glutes directly, often weighted with a barbell.",
+        "sets": "3",
+        "reps": "10–12",
+        "step_by_step": [
+            {
+                "step": "Sit with your upper back against a bench, feet flat on the floor.",
+                "tips": "Keep chin tucked and core engaged."
+            },
+            {
+                "step": "Place a barbell across your hips (optional).",
+                "tips": "Ensure even weight distribution."
+            },
+            {
+                "step": "Drive hips upward until thighs are parallel to the floor.",
+                "tips": "Squeeze glutes at the top."
+            },
+            {
+                "step": "Lower back down with control.",
+                "tips": "Avoid letting hips drop quickly."
+            }
+        ],
+        "benefits": [ "Isolates glutes", "Improves hip extension strength", "Enhances lower body aesthetics" ],
+        "common_mistakes": [ "Overarching lower back", "Feet too far from bench", "Using momentum" ]
+    }
+}
