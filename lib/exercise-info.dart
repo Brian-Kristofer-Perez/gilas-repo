@@ -218,14 +218,13 @@ class ContentCard extends StatelessWidget {
   }
 }
 
-
 class TextLabel extends StatelessWidget {
   final String label;
 
   const TextLabel({
-    Key? key,
+    super.key,
     required this.label,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -272,8 +271,15 @@ class LabelList extends StatelessWidget {
   }
 }
 
-
 class ExerciseInfo extends StatelessWidget {
+
+  final Map<String, dynamic> exercise;
+
+  const ExerciseInfo({
+    super.key,
+    required this.exercise,
+  });
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -301,12 +307,12 @@ class ExerciseInfo extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    "Barbell Press",
+                    exercise["name"],
                     style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                   ),
                   SizedBox(height: 8),
                   LabelList(
-                      labels: ["Push", "Chest"]
+                      labels: [exercise["category"], exercise["muscle_groups"][0]]
                   ),
                 ],
               ),
@@ -329,13 +335,12 @@ class ExerciseInfo extends StatelessWidget {
                 Row(
                   mainAxisSize: MainAxisSize.min,
                   children: [
-
-                    Expanded(child:
+                    Expanded(
+                      child:
                       Container(
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-
                             Row(
                               mainAxisSize: MainAxisSize.min,
                               children: [
@@ -356,7 +361,7 @@ class ExerciseInfo extends StatelessWidget {
 
                             SizedBox(height: 8),
                             LabelList(
-                              labels: ["Chest", "Front Deltoids", "Triceps"]
+                              labels: List<String>.from(exercise["muscle_groups"])
                             )
                           ],
                         ),
@@ -370,7 +375,6 @@ class ExerciseInfo extends StatelessWidget {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-
                             Row(
                               mainAxisSize: MainAxisSize.min,
                               children: [
@@ -392,7 +396,7 @@ class ExerciseInfo extends StatelessWidget {
                             SizedBox(height: 8),
 
                             LabelList(
-                              labels: ["Barbell", "Bench", "Safety Rack"],
+                              labels: List<String>.from(exercise["equipment"])
                             )
                           ],
                         ),
@@ -438,20 +442,12 @@ class ExerciseInfo extends StatelessWidget {
                 title: "Step-by-step Instructions",
                 children: [
                   InstructionList(
-                    instructions: [
-                      "Start in a high plank position with your hands directly under your shoulders.",
-                      "Keep your body in a straight line from head to heels.",
-                      "Lower your chest toward the ground by bending your elbows.",
-                      "Pause briefly when your chest is just above the floor.",
-                      "Push back up to the starting position by straightening your arms.",
-                    ],
-                    tips: [
-                      "Engage your core to prevent your hips from sagging.",
-                      "Keep your neck neutral by looking slightly ahead of you.",
-                      "Don’t let your elbows flare out too wide.",
-                      "Go slow for better control and muscle activation.",
-                      "Breathe out as you push up, and inhale as you lower.",
-                    ],
+                    instructions: (exercise["step_by_step"] as List<dynamic>)
+                        .map((e) => (e as Map<String, dynamic>)["step"] as String)
+                        .toList(),
+                    tips: (exercise["step_by_step"] as List<dynamic>)
+                        .map((e) => (e as Map<String, dynamic>)["tips"] as String)
+                        .toList(),
                   ),
                 ]
             ),
@@ -468,13 +464,8 @@ class ExerciseInfo extends StatelessWidget {
                 title: "Common Mistakes",
                 color: Colors.red,
                 children: [
-                  MistakesList(mistakes: [
-                    "Bouncing the bar off the chest",
-                    "Flaring elbows too wide",
-                    "Not maintaining proper back arch",
-                    "Uneven bar path",
-                    "Lifting feet off the ground",
-                    ]
+                  MistakesList(
+                      mistakes: List<String>.from(exercise["common_mistakes"])
                   )
                 ]
             ),
@@ -493,12 +484,7 @@ class ExerciseInfo extends StatelessWidget {
                 children: [
                   Column(children: [
                     BenefitsList(
-                      benefits: [
-                        "Builds overall chest mass and strength",
-                        "Develops anterior deltoids and triceps",
-                        "Improves pushing power",
-                        "Functional movement pattern",
-                      ],
+                      benefits: List<String>.from(exercise["benefits"])
                     )
                   ],)
                 ]
