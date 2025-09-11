@@ -68,7 +68,9 @@ class HomeScreen extends StatelessWidget {
                     ),
                     const SizedBox(height: 24),
                     ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pushNamed(context, '/exercises');
+                      },
                       style: ElevatedButton.styleFrom(
                         backgroundColor: const Color(0xFF2196F3),
                         foregroundColor: Colors.white,
@@ -169,6 +171,7 @@ class HomeScreen extends StatelessWidget {
                                       exerciseCount: '15 exercises',
                                       color: const Color(0xFF2196F3),
                                       icon: Icons.arrow_upward,
+                                      context: context
                                     ),
                                   ),
                                   const SizedBox(width: 16),
@@ -179,6 +182,7 @@ class HomeScreen extends StatelessWidget {
                                       exerciseCount: '12 exercises',
                                       color: const Color(0xFF00BCD4),
                                       icon: Icons.arrow_downward,
+                                      context: context
                                     ),
                                   ),
                                   const SizedBox(width: 16),
@@ -189,6 +193,7 @@ class HomeScreen extends StatelessWidget {
                                       exerciseCount: '18 exercises',
                                       color: const Color(0xFF9C27B0),
                                       icon: Icons.directions_run,
+                                      context: context
                                     ),
                                   ),
                                 ],
@@ -208,7 +213,7 @@ class HomeScreen extends StatelessWidget {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              const Row(
+                              Row(
                                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                 children: [
                                   Text(
@@ -219,23 +224,29 @@ class HomeScreen extends StatelessWidget {
                                       color: Color(0xFF333333),
                                     ),
                                   ),
-                                  Row(
-                                    children: [
-                                      Text(
-                                        'See All',
-                                        style: TextStyle(
-                                          color: Color(0xFF2196F3),
-                                          fontWeight: FontWeight.w600,
-                                          fontSize: 16,
+                                  GestureDetector(
+                                    onTap: () {
+                                      Navigator.pushNamed(context, '/exercises');
+
+                                    },
+                                    child: Row(
+                                      children: [
+                                        Text(
+                                          'See All',
+                                          style: TextStyle(
+                                            color: Color(0xFF2196F3),
+                                            fontWeight: FontWeight.w600,
+                                            fontSize: 16,
+                                          ),
                                         ),
-                                      ),
-                                      SizedBox(width: 4),
-                                      Icon(
-                                        Icons.arrow_forward,
-                                        color: Color(0xFF2196F3),
-                                        size: 18,
-                                      ),
-                                    ],
+                                        SizedBox(width: 4),
+                                        Icon(
+                                          Icons.arrow_forward,
+                                          color: Color(0xFF2196F3),
+                                          size: 18,
+                                        ),
+                                      ],
+                                    )
                                   ),
                                 ],
                               ),
@@ -362,7 +373,7 @@ class HomeScreen extends StatelessWidget {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              const Row(
+                              Row(
                                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                 children: [
                                   Text(
@@ -373,24 +384,30 @@ class HomeScreen extends StatelessWidget {
                                       color: Color(0xFF333333),
                                     ),
                                   ),
-                                  Row(
-                                    children: [
-                                      Text(
-                                        'See All',
-                                        style: TextStyle(
-                                          color: Color(0xFF2196F3),
-                                          fontWeight: FontWeight.w600,
-                                          fontSize: 16,
+                                  GestureDetector(
+                                    onTap: (){
+                                      Navigator.pushNamed(context, '/exercises');
+                                    },
+                                    child: Row(
+                                      children: [
+                                        Text(
+                                          'See All',
+                                          style: TextStyle(
+                                            color: Color(0xFF2196F3),
+                                            fontWeight: FontWeight.w600,
+                                            fontSize: 16,
+                                          ),
                                         ),
-                                      ),
-                                      SizedBox(width: 4),
-                                      Icon(
-                                        Icons.arrow_forward,
-                                        color: Color(0xFF2196F3),
-                                        size: 18,
-                                      ),
-                                    ],
-                                  ),
+                                        SizedBox(width: 4),
+                                        Icon(
+                                          Icons.arrow_forward,
+                                          color: Color(0xFF2196F3),
+                                          size: 18,
+                                        ),
+                                      ],
+                                    )
+                                  )
+,
                                 ],
                               ),
                               const SizedBox(height: 16),
@@ -538,6 +555,7 @@ class HomeScreen extends StatelessWidget {
   }
 
   Widget _buildWorkoutCard({
+    required BuildContext context,
     required String title,
     required String subtitle,
     required String exerciseCount,
@@ -609,7 +627,9 @@ class HomeScreen extends StatelessWidget {
           SizedBox(
             width: double.infinity,
             child: ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.pushNamed(context, '/exercises');
+              },
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.white,
                 foregroundColor: color,
