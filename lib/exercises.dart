@@ -158,7 +158,9 @@ return Scaffold(
   toolbarHeight: 80,
   leadingWidth: 220,
   leading: TextButton.icon(
-    onPressed: () {},
+    onPressed: () {
+      Navigator.pop(context);
+    },
     icon: const Icon(Icons.arrow_back, color: Colors.black),
     label: const Text(
       'Back to Home',
@@ -318,7 +320,7 @@ Widget _buildMuscleGroupsSection(Map<String, List<Exercise>> muscleGroups) {
                   Container(
                     padding: const EdgeInsets.only(left: 16, right: 16, bottom: 16),
                     child: Column(
-                      children: exercises.map((exercise) => _buildExerciseItem(exercise)).toList(),
+                      children: exercises.map((exercise) => _buildExerciseItem(exercise, context)).toList(),
                     ),
                   ),
               ],
@@ -330,8 +332,10 @@ Widget _buildMuscleGroupsSection(Map<String, List<Exercise>> muscleGroups) {
   );
 }
 
-  Widget _buildExerciseItem(Exercise exercise) {
-    return Container(
+  Widget _buildExerciseItem(Exercise exercise, BuildContext context) {
+    return GestureDetector(
+      onTap: () => Navigator.pushNamed(context, "exercises/${toSnakeCase(exercise.name)}"),
+      child: Container(
       margin: const EdgeInsets.only(bottom: 8),
       padding: const EdgeInsets.all(12),
       decoration: BoxDecoration(
@@ -409,6 +413,7 @@ Widget _buildMuscleGroupsSection(Map<String, List<Exercise>> muscleGroups) {
           ),
         ],
       ),
+    )
     );
   }
 
