@@ -42,6 +42,12 @@ class Exercise {
   }
 }
 
+String toSnakeCase(String text) {
+  return text
+      .replaceAll(RegExp(r'[\s-]+'), '_')
+      .toLowerCase();
+}
+
 class HoverPlayIcon extends StatefulWidget {
   const HoverPlayIcon({super.key});
 
@@ -152,7 +158,9 @@ return Scaffold(
   toolbarHeight: 80,
   leadingWidth: 220,
   leading: TextButton.icon(
-    onPressed: () {},
+    onPressed: () {
+      Navigator.pop(context);
+    },
     icon: const Icon(Icons.arrow_back, color: Colors.black),
     label: const Text(
       'Back to Home',
@@ -312,7 +320,7 @@ Widget _buildMuscleGroupsSection(Map<String, List<Exercise>> muscleGroups) {
                   Container(
                     padding: const EdgeInsets.only(left: 16, right: 16, bottom: 16),
                     child: Column(
-                      children: exercises.map((exercise) => _buildExerciseItem(exercise)).toList(),
+                      children: exercises.map((exercise) => _buildExerciseItem(exercise, context)).toList(),
                     ),
                   ),
               ],
@@ -324,8 +332,10 @@ Widget _buildMuscleGroupsSection(Map<String, List<Exercise>> muscleGroups) {
   );
 }
 
-  Widget _buildExerciseItem(Exercise exercise) {
-    return Container(
+  Widget _buildExerciseItem(Exercise exercise, BuildContext context) {
+    return GestureDetector(
+      onTap: () => Navigator.pushNamed(context, "exercises/${toSnakeCase(exercise.name)}"),
+      child: Container(
       margin: const EdgeInsets.only(bottom: 8),
       padding: const EdgeInsets.all(12),
       decoration: BoxDecoration(
@@ -403,6 +413,7 @@ Widget _buildMuscleGroupsSection(Map<String, List<Exercise>> muscleGroups) {
           ),
         ],
       ),
+    )
     );
   }
 
@@ -445,7 +456,7 @@ Widget _buildMuscleGroupsSection(Map<String, List<Exercise>> muscleGroups) {
                   return Container(
                     width: 340,
                     margin: const EdgeInsets.only(right: 16),
-                    child: _buildFeaturedCard(exercise),
+                    child: _buildFeaturedCard(exercise, context),
                   );
                 },
               ),
@@ -457,7 +468,7 @@ Widget _buildMuscleGroupsSection(Map<String, List<Exercise>> muscleGroups) {
   }
 
 
-  Widget _buildFeaturedCard(Exercise exercise) {
+  Widget _buildFeaturedCard(Exercise exercise, BuildContext context) {
     final isHovered = hoveredCards.contains(exercise.name);
 
     return MouseRegion(
@@ -560,10 +571,13 @@ Widget _buildMuscleGroupsSection(Map<String, List<Exercise>> muscleGroups) {
                 ),
               ],
             ),
-              const Positioned(
-                top: 0,
-                right: 0,
-                child: HoverPlayIcon(),
+            Positioned(
+              top: 0,
+              right: 0,
+              child: GestureDetector(
+                onTap: () => Navigator.pushNamed(context, "/exercises/${toSnakeCase(exercise.name)}"),
+                child: HoverPlayIcon()
+              )
             ),
           ],
         ),
