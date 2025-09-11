@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app_demo/exercises.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -416,7 +417,8 @@ class HomeScreen extends StatelessWidget {
                                 child: Row(
                                   children: [
                                     _buildBeginnerExerciseCard(
-                                      title: 'Push-ups',
+                                      context: context,
+                                      title: 'Push up',
                                       category: 'Chest',
                                       sets: '3 sets',
                                       reps: '8-12 reps',
@@ -424,7 +426,8 @@ class HomeScreen extends StatelessWidget {
                                     ),
                                     const SizedBox(width: 16),
                                     _buildBeginnerExerciseCard(
-                                      title: 'Bodyweight Squats',
+                                      context: context,
+                                      title: 'Squats',
                                       category: 'Legs',
                                       sets: '3 sets',
                                       reps: '12-15 reps',
@@ -432,7 +435,8 @@ class HomeScreen extends StatelessWidget {
                                     ),
                                     const SizedBox(width: 16),
                                     _buildBeginnerExerciseCard(
-                                      title: 'Assisted Pull-ups',
+                                      context: context,
+                                      title: 'Pull Up',
                                       category: 'Back',
                                       sets: '3 sets',
                                       reps: '5-8 reps',
@@ -797,8 +801,11 @@ class HomeScreen extends StatelessWidget {
     required String sets,
     required String reps,
     required String description,
+    required BuildContext context,
   }) {
-    return Container(
+    return GestureDetector(
+      onTap: () => Navigator.pushNamed(context, "/exercises/${toSnakeCase(title)}"),
+      child: Container(
       width: 200,
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
@@ -887,6 +894,7 @@ class HomeScreen extends StatelessWidget {
           ),
         ],
       ),
+    )
     );
   }
 
