@@ -42,6 +42,12 @@ class Exercise {
   }
 }
 
+String toSnakeCase(String text) {
+  return text
+      .replaceAll(RegExp(r'[\s-]+'), '_')
+      .toLowerCase();
+}
+
 class HoverPlayIcon extends StatefulWidget {
   const HoverPlayIcon({super.key});
 
@@ -445,7 +451,7 @@ Widget _buildMuscleGroupsSection(Map<String, List<Exercise>> muscleGroups) {
                   return Container(
                     width: 340,
                     margin: const EdgeInsets.only(right: 16),
-                    child: _buildFeaturedCard(exercise),
+                    child: _buildFeaturedCard(exercise, context),
                   );
                 },
               ),
@@ -457,7 +463,7 @@ Widget _buildMuscleGroupsSection(Map<String, List<Exercise>> muscleGroups) {
   }
 
 
-  Widget _buildFeaturedCard(Exercise exercise) {
+  Widget _buildFeaturedCard(Exercise exercise, BuildContext context) {
     final isHovered = hoveredCards.contains(exercise.name);
 
     return MouseRegion(
@@ -560,10 +566,13 @@ Widget _buildMuscleGroupsSection(Map<String, List<Exercise>> muscleGroups) {
                 ),
               ],
             ),
-              const Positioned(
-                top: 0,
-                right: 0,
-                child: HoverPlayIcon(),
+            Positioned(
+              top: 0,
+              right: 0,
+              child: GestureDetector(
+                onTap: () => Navigator.pushNamed(context, "/exercises/${toSnakeCase(exercise.name)}"),
+                child: HoverPlayIcon()
+              )
             ),
           ],
         ),
