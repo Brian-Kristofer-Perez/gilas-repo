@@ -318,62 +318,69 @@ Widget _buildMuscleGroupsSection(Map<String, List<Exercise>> muscleGroups) {
                 ),
               ],
             ),
-            child: ExpansionTile(
-              key: PageStorageKey<String>(muscleGroup), // keep state during scroll
-              initiallyExpanded: isExpanded,
-              onExpansionChanged: (expanded) {
-                setState(() {
-                  if (expanded) {
-                    expandedMuscleGroups.add(muscleGroup);
-                  } else {
-                    expandedMuscleGroups.remove(muscleGroup);
-                  }
-                });
-              },
-              tilePadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 15),
-              childrenPadding: const EdgeInsets.only(left: 16, right: 16, bottom: 16),
-              leading: Container(
-                padding: const EdgeInsets.all(12),
-                decoration: BoxDecoration(
-                  color: Colors.grey.shade100,
-                  borderRadius: BorderRadius.circular(8),
-                ),
-                child: Icon(
-                  Icons.fitness_center,
-                  color: Colors.grey.shade600,
-                ),
+            child: Theme(
+              data: Theme.of(context).copyWith(
+                dividerColor: Colors.transparent, 
+                hoverColor: Colors.transparent,   
+                splashColor: Colors.transparent,  
               ),
-              title: Text(
-                muscleGroup.toUpperCase(),
-                style: const TextStyle(
-                  fontSize: 16,
-                  fontWeight: FontWeight.w600,
-                ),
-              ),
-              trailing: Row(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  Text(
-                    '${exercises.length} exercises',
-                    style: TextStyle(
-                      fontSize: 14,
-                      color: Colors.grey.shade600,
-                    ),
+              child: ExpansionTile(
+                key: PageStorageKey<String>(muscleGroup),
+                initiallyExpanded: isExpanded,
+                onExpansionChanged: (expanded) {
+                  setState(() {
+                    if (expanded) {
+                      expandedMuscleGroups.add(muscleGroup);
+                    } else {
+                      expandedMuscleGroups.remove(muscleGroup);
+                    }
+                  });
+                },
+                tilePadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 15),
+                childrenPadding: const EdgeInsets.only(left: 16, right: 16, bottom: 16),
+                leading: Container(
+                  padding: const EdgeInsets.all(12),
+                  decoration: BoxDecoration(
+                    color: Colors.grey.shade100,
+                    borderRadius: BorderRadius.circular(8),
                   ),
-                  const SizedBox(width: 8),
-                  AnimatedRotation(
-                    turns: isExpanded ? 0.5 : 0,
-                    duration: const Duration(milliseconds: 200),
-                    child: Icon(
-                      Icons.keyboard_arrow_down,
-                      color: Colors.grey.shade600,
-                    ),
+                  child: Icon(
+                    Icons.fitness_center,
+                    color: Colors.grey.shade600,
                   ),
-                ],
+                ),
+                title: Text(
+                  muscleGroup.toUpperCase(),
+                  style: const TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.w600,
+                  ),
+                ),
+                trailing: Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Text(
+                      '${exercises.length} exercises',
+                      style: TextStyle(
+                        fontSize: 14,
+                        color: Colors.grey.shade600,
+                      ),
+                    ),
+                    const SizedBox(width: 8),
+                    AnimatedRotation(
+                      turns: isExpanded ? 0.5 : 0,
+                      duration: const Duration(milliseconds: 200),
+                      child: Icon(
+                        Icons.keyboard_arrow_down,
+                        color: Colors.grey.shade600,
+                      ),
+                    ),
+                  ],
+                ),
+                children: exercises
+                    .map((exercise) => _buildExerciseItem(exercise, context))
+                    .toList(),
               ),
-              children: exercises
-                  .map((exercise) => _buildExerciseItem(exercise, context))
-                  .toList(),
             ),
           );
         }).toList(),
