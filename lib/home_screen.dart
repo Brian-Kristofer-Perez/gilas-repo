@@ -228,7 +228,6 @@ class HomeScreen extends StatelessWidget {
                                   GestureDetector(
                                     onTap: () {
                                       Navigator.pushNamed(context, '/exercises');
-
                                     },
                                     child: Row(
                                       children: [
@@ -253,34 +252,34 @@ class HomeScreen extends StatelessWidget {
                               ),
                               const SizedBox(height: 24),
                               _buildExerciseItem(
-                                title: 'Barbell Bench Press',
+                                title: 'Bench Press',
                                 category: 'Chest',
                                 sets: '4 sets',
                                 reps: '6-8 reps',
-                                description:
-                                    'The king of chest exercises - focus on controlled movement',
+                                description: 'The king of chest exercises - focus on controlled movement',
+                                context: context
                               ),
                               const SizedBox(height: 20),
                               const Divider(height: 1, color: Color(0xFFEEEEEE)),
                               const SizedBox(height: 20),
                               _buildExerciseItem(
-                                title: 'Pull-ups',
+                                title: 'Pull up',
                                 category: 'Back',
                                 sets: '4 sets',
                                 reps: '6-10 reps',
-                                description:
-                                    'Ultimate back builder - use assistance if needed',
+                                description: 'Ultimate back builder - use assistance if needed',
+                                context: context
                               ),
                               const SizedBox(height: 20),
                               const Divider(height: 1, color: Color(0xFFEEEEEE)),
                               const SizedBox(height: 20),
                               _buildExerciseItem(
-                                title: 'Squats',
+                                title: 'Squat',
                                 category: 'Legs',
                                 sets: '4 sets',
                                 reps: '8-10 reps',
-                                description:
-                                    'Foundation of leg strength - go as deep as mobility allows',
+                                description: 'Foundation of leg strength - go as deep as mobility allows',
+                                context: context
                               ),
                               const SizedBox(height: 20),
                               const Divider(height: 1, color: Color(0xFFEEEEEE)),
@@ -291,6 +290,7 @@ class HomeScreen extends StatelessWidget {
                                 sets: '4 sets',
                                 reps: '6-8 reps',
                                 description: 'Build strong shoulders - keep core tight',
+                                context: context
                               ),
                             ],
                           ),
@@ -330,29 +330,29 @@ class HomeScreen extends StatelessWidget {
                                 children: [
                                   Row(
                                     children: [
-                                      Expanded(child: _buildMuscleGroupChip('Chest', '4 exercises')),
+                                      Expanded(child: _buildMuscleGroupChip('Chest', '4 exercises', context)),
                                       const SizedBox(width: 12),
-                                      Expanded(child: _buildMuscleGroupChip('Shoulders', '4 exercises')),
+                                      Expanded(child: _buildMuscleGroupChip('Shoulders', '4 exercises', context)),
                                       const SizedBox(width: 12),
-                                      Expanded(child: _buildMuscleGroupChip('Triceps', '4 exercises')),
+                                      Expanded(child: _buildMuscleGroupChip('Triceps', '4 exercises', context)),
                                     ],
                                   ),
                                   const SizedBox(height: 12),
                                   Row(
                                     children: [
-                                      Expanded(child: _buildMuscleGroupChip('Back', '5 exercises')),
+                                      Expanded(child: _buildMuscleGroupChip('Back', '5 exercises', context)),
                                       const SizedBox(width: 12),
-                                      Expanded(child: _buildMuscleGroupChip('Biceps', '4 exercises')),
+                                      Expanded(child: _buildMuscleGroupChip('Biceps', '4 exercises', context)),
                                       const SizedBox(width: 12),
-                                      Expanded(child: _buildMuscleGroupChip('Legs', '5 exercises')),
+                                      Expanded(child: _buildMuscleGroupChip('Legs', '5 exercises', context)),
                                     ],
                                   ),
                                   const SizedBox(height: 12),
                                   Row(
                                     children: [
-                                      Expanded(child: _buildMuscleGroupChip('Glutes', '4 exercises')),
+                                      Expanded(child: _buildMuscleGroupChip('Glutes', '4 exercises', context)),
                                       const SizedBox(width: 12),
-                                      Expanded(child: _buildMuscleGroupChip('Core', '5 exercises')),
+                                      Expanded(child: _buildMuscleGroupChip('Core', '5 exercises', context)),
                                       const SizedBox(width: 12),
                                       Expanded(child: Container()), // Empty space to maintain alignment
                                     ],
@@ -658,8 +658,11 @@ class HomeScreen extends StatelessWidget {
     required String sets,
     required String reps,
     required String description,
+    required BuildContext context
   }) {
-    return Row(
+    return GestureDetector(
+      onTap: () => Navigator.pushNamed(context, "/exercises/${toSnakeCase(title)}"),
+      child: Row(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Container(
@@ -753,11 +756,14 @@ class HomeScreen extends StatelessWidget {
           ),
         ),
       ],
+    )
     );
   }
 
-  Widget _buildMuscleGroupChip(String muscleGroup, String exerciseCount) {
-    return Container(
+  Widget _buildMuscleGroupChip(String muscleGroup, String exerciseCount, BuildContext context) {
+    return GestureDetector(
+      onTap: () => Navigator.pushNamed(context, "/exercises"),
+      child: Container(
       padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
       decoration: BoxDecoration(
         color: Colors.white,
@@ -792,6 +798,7 @@ class HomeScreen extends StatelessWidget {
           ),
         ],
       ),
+    )
     );
   }
 
